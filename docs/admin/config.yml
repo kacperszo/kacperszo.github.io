@@ -1,0 +1,23 @@
+backend:
+  name: github
+  repo: kacperszo/kacperszo.github.io
+  branch: gh-pages
+  site_domain: gracious-turing-735750.netlify.app
+
+media_folder: 'docs/assets/uploads'
+public_folder: "/assets/uploads"
+
+collections:
+  - name: 'blog'
+    label: 'Blog'
+    folder: 'docs/_posts/'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Background', name: 'background', widget: 'image'}
